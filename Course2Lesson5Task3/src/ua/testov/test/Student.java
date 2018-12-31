@@ -1,6 +1,6 @@
 package ua.testov.test;
 
-public class Student extends Human  {
+public class Student extends Human {
 	private boolean stipend;
 	private int numberOfGradebook;
 	private double gradePoint;
@@ -17,7 +17,7 @@ public class Student extends Human  {
 		super.setSecondName(secondName);
 	}
 
-	public Student(int numberOfGradebook, String secondName,boolean gender, int age) {
+	public Student(int numberOfGradebook, String secondName, boolean gender, int age) {
 		super();
 		this.numberOfGradebook = numberOfGradebook;
 		super.setSecondName(secondName);
@@ -66,30 +66,4 @@ public class Student extends Human  {
 				+ isGender() + ", getAge()=" + getAge() + ", numberOfGradebook=" + numberOfGradebook + ", Stipend="
 				+ stipend + ", Income=" + getIncome() + "]\n";
 	}
-
-//	if(o==null || this.getSecondName()==null || st.getSecondName()==null) throw new NullPointerException();
-//	@Override
-//	public int compareTo(Object o) {
-//		Student st = (Student) o;
-//		int x = 0;
-//		try {
-//			if (this.getSecondName().compareToIgnoreCase(st.getSecondName()) > 0) {
-//				return x = 1;
-//			}
-//			if (this.getSecondName().compareToIgnoreCase(st.getSecondName()) < 0) {
-//				return x = -1;
-//			}
-//		} catch (NullPointerException e) {
-//			// TODO: handle exception
-//			e.printStackTrace();
-//		}
-//
-//		return x;
-//	}
-	
 }
-//@Override
-//public String toString() {
-//	return "secondname=" + getSecondName();
-//
-//}
