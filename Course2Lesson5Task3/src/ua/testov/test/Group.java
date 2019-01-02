@@ -156,27 +156,6 @@ public class Group implements Military {
 		return saveStringToFile(str, new File(path, "result.csv"));
 	}
 	
-//	public static String readTextFromFile(File file) {
-//		String str = "";
-//		String strRes = "";
-//		try (BufferedReader f = new BufferedReader(new FileReader(file))) {
-//			for (; (str = f.readLine()) != null;) {
-//				strRes += str;
-//				strRes +=System.lineSeparator();
-//			}
-//		} catch (IOException e) {
-//			System.out.println("ERROR");
-//		}
-//		return strRes;
-//	}
-//	public static String[] groupFromFile(String path) {
-//		File gr=new File(path);
-//		String[] massOne = readTextFromFile(gr).split(",");
-//		for (int i = 0; i < massOne.length; i++) {
-//			Student student=new Student();
-//		}
-//		return massOne;
-//	}
 
 	@Override
 	public String toString() {
