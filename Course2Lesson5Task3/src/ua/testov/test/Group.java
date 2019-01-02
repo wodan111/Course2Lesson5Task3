@@ -142,9 +142,10 @@ public class Group implements Military {
 			for (int i = 0; i < this.st.length; i++) {
 //		str+=st[i].getFirstName()+" "+st[i].getSecondName()+" "+st[i].isGender()+" "+st[i].getAge()+" "+st[i].getNumberOfGradebook()+" "+
 //				st[i].isStipend()+" "+st[i].getIncome();
-				if(st[i]!=null) {
-				str += this.st[i].getNumberOfGradebook()+this.st[i].getSecondName() + "," + this.st[i].isGender() + "," + this.st[i].getAge() + "," ;
-				str += System.lineSeparator();
+				if (st[i] != null) {
+					str += this.st[i].getNumberOfGradebook() + "," + this.st[i].getSecondName() + ","
+							+ this.st[i].isGender() + "," + this.st[i].getAge();
+					str += System.lineSeparator();
 				}
 			}
 		} catch (NullPointerException e) {
@@ -154,7 +155,6 @@ public class Group implements Military {
 
 		return saveStringToFile(str, new File(path, "result.csv"));
 	}
-	
 
 	@Override
 	public String toString() {
