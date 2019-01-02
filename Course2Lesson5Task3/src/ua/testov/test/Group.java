@@ -1,5 +1,6 @@
 package ua.testov.test;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -7,6 +8,7 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
+import java.io.FileReader;
 
 public class Group implements Military {
 
@@ -141,7 +143,7 @@ public class Group implements Military {
 //		str+=st[i].getFirstName()+" "+st[i].getSecondName()+" "+st[i].isGender()+" "+st[i].getAge()+" "+st[i].getNumberOfGradebook()+" "+
 //				st[i].isStipend()+" "+st[i].getIncome();
 				if(st[i]!=null) {
-				str += this.st[i].getSecondName() + "," + this.st[i].isGender() + "," + this.st[i].getAge() + "," + this.st[i].getNumberOfGradebook();
+				str += this.st[i].getNumberOfGradebook()+this.st[i].getSecondName() + "," + this.st[i].isGender() + "," + this.st[i].getAge() + "," ;
 				str += System.lineSeparator();
 				}
 			}
@@ -149,10 +151,10 @@ public class Group implements Military {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
-//	File file = saveStringToFile(str, new File(path, "result.csv"));
 
 		return saveStringToFile(str, new File(path, "result.csv"));
 	}
+	
 
 	@Override
 	public String toString() {
