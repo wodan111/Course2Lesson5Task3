@@ -4,7 +4,7 @@ public class Student extends Human {
 	private boolean stipend;
 	private int numberOfGradebook;
 	private double gradePoint;
-//	private int age;
+
 
 	public Student() {
 		super();
@@ -25,7 +25,7 @@ public class Student extends Human {
 		super.setAge(age);
 	}
 
-	public Student(String firstName, String secondName, boolean gender, int age, int numberOfGradebook,
+	public Student(String firstName, String secondName, boolean gender, double age, int numberOfGradebook,
 			double gradePoint) {
 		super(firstName, secondName, gender, age);
 		this.numberOfGradebook = numberOfGradebook;
