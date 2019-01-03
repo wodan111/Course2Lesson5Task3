@@ -1,6 +1,6 @@
 package ua.testov.test;
 
-import java.util.Arrays;
+
 
 public class Main {
 
@@ -16,14 +16,9 @@ public class Main {
 		Group gr1 = new Group("Group One");
 
 		gr1.addStudent(1, st1, st2, st3, st4, st5);
-//		System.out.println(Arrays.toString(gr1.sortWithParam(2,En.reverse)));
-//		System.out.println(Arrays.toString(gr1.getDraftees(gr1.sortWithParam(2,En.reverse))));
-	//	System.out.println(gr1);
-	//	gr1.writeGroupToFile(".");
+
 		Group groupOfStudent=Group.groupFromFile("result.csv");
 		System.out.println(groupOfStudent);
-	//	System.out.println(Arrays.asList(Group.groupFromFile("result.csv")));
-//		Group.groupFromFile("result.csv");
 
 	}
 }
