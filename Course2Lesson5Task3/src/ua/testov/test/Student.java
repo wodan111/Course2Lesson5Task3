@@ -17,7 +17,7 @@ public class Student extends Human {
 		super.setSecondName(secondName);
 	}
 
-	public Student(int numberOfGradebook, String secondName, boolean gender, int age) {
+	public Student(int numberOfGradebook, String secondName, boolean gender, double age) {
 		super();
 		this.numberOfGradebook = numberOfGradebook;
 		super.setSecondName(secondName);

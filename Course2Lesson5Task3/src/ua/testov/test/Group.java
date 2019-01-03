@@ -142,10 +142,10 @@ public class Group implements Military {
 			for (int i = 0; i < this.st.length; i++) {
 //		str+=st[i].getFirstName()+" "+st[i].getSecondName()+" "+st[i].isGender()+" "+st[i].getAge()+" "+st[i].getNumberOfGradebook()+" "+
 //				st[i].isStipend()+" "+st[i].getIncome();
-				if(st[i]!=null) {
-				str += this.st[i].getNumberOfGradebook() + "," + this.st[i].getSecondName() + ","
-						+ this.st[i].isGender() + "," + this.st[i].getAge();
-				str+=System.lineSeparator();
+				if (st[i] != null) {
+					str += this.st[i].getNumberOfGradebook() + "," + this.st[i].getSecondName() + ","
+							+ this.st[i].isGender() + "," + this.st[i].getAge();
+					str += System.lineSeparator();
 				}
 			}
 		} catch (NullPointerException e) {
@@ -155,7 +155,40 @@ public class Group implements Military {
 
 		return saveStringToFile(str, new File(path, "result.csv"));
 	}
-	
+
+	public static String readTextFromFile(File file) {
+		String str = "";
+		String strRes = "";
+		try (BufferedReader f = new BufferedReader(new FileReader(file))) {
+			for (; (str = f.readLine()) != null;) {
+				strRes += str;
+				strRes += System.lineSeparator();
+			}
+		} catch (IOException e) {
+			System.out.println("ERROR");
+		}
+		return strRes;
+	}
+
+	public static Group groupFromFile(String path) {
+		File gr = new File(path);
+		Group group = new Group();
+		String[] massOne = readTextFromFile(gr).split(System.lineSeparator());
+		String[] massTwo = new String[] {};
+		try {
+			for (int i = 0; i < massOne.length; i++) {
+				massTwo = massOne[i].split(";");
+				Student student = new Student(Integer.valueOf(massTwo[0]), String.valueOf(massTwo[1]),
+						Boolean.valueOf(massTwo[2]), Double.valueOf(massTwo[3]));
+			
+				group.addStudent(i + 1, student);
+			}	
+		} catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
+		
+		return group;
+	}
 
 	@Override
 	public String toString() {
