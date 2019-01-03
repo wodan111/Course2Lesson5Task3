@@ -174,10 +174,9 @@ public class Group implements Military {
 		File gr = new File(path);
 		Group group = new Group();
 		String[] massOne = readTextFromFile(gr).split(System.lineSeparator());
-		String[] massTwo = new String[] {};
 		try {
 			for (int i = 0; i < massOne.length; i++) {
-				massTwo = massOne[i].split(";");
+				String[] massTwo = massOne[i].split(";");
 				Student student = new Student(Integer.valueOf(massTwo[0]), String.valueOf(massTwo[1]),
 						Boolean.valueOf(massTwo[2]), Double.valueOf(massTwo[3]));
 
