@@ -180,13 +180,13 @@ public class Group implements Military {
 				massTwo = massOne[i].split(";");
 				Student student = new Student(Integer.valueOf(massTwo[0]), String.valueOf(massTwo[1]),
 						Boolean.valueOf(massTwo[2]), Double.valueOf(massTwo[3]));
-			
+
 				group.addStudent(i + 1, student);
-			}	
+			}
 		} catch (NumberFormatException e) {
 			e.printStackTrace();
 		}
-		
+
 		return group;
 	}
 

@@ -1,4 +1,4 @@
-package ua.testov.test;
+package ua.testov.test; 
 
 public class Student extends Human {
 	private boolean stipend;
